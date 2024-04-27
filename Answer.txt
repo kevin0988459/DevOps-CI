@@ -1,0 +1,12 @@
+What are the potential stages that can be added into CI process and for what purposes?
+
+Pet-clinc unit testing and integration testing are already done in the build stage.
+I thinks Current CI process lack of security check and feedback loop so I came up with two more stages that can be added into the process.
+
+1. Dependency Scanning
+Automatically scan dependencies for known vulnerabilities using tools like OWASP Dependency-Check. 
+This helps ensure that the libraries and frameworks your project relies on do not introduce security risks.
+
+2. Quality Gates (Jenkins, Sonarqube and Jira)
+The code is evaluated against the predefined criteria using tools integrated into the CI pipeline, such as SonarQube for code quality and security checks.
+When Jenkins detects issues that cause a Quality Gate failure, it can automatically create tickets/issues in Jira. These Jira tickets can then be assigned to developers for resolution.
